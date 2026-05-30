@@ -7,7 +7,7 @@ This project is a web-based form-filling application that bridges a custom front
 * **Automated Data Sync:** Form submissions are linked directly to Google Forms/Excel.
 
 ##  Tech Stack
-* **Frontend:** HTML5, CSS3, JavaScript (Vanilla)
+* **Frontend:** HTML, CSS, JavaScript
 * **Version Control:** Git & GitHub
 
 ##  Team Members
