@@ -14,6 +14,6 @@ This project is a web-based form-filling application that bridges a custom front
 * [Kartikey Kanaujiya]
 * [Taras Mandi]
 * [Sanjana Suman Shaw]
-* [Subrodip patra]
+* [Subhrodip patra]
 * [Sai Snehit]
 * [Swaroop Raj]
