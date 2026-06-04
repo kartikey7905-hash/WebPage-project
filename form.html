@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Intake | SAI Cell</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <canvas id="ambient-mesh"></canvas>
+
+    <div class="app-container show-interface">
+        <header class="navbar">
+            <div class="logo-brand">
+                <span class="orange-text">SAI</span><span class="white-text">CELL</span>
+            </div>
+            <nav class="nav-links">
+                <a href="./index.html" class="nav-item">BACK TO BASE</a>
+            </nav>
+        </header>
+
+        <main class="form-center-box">
+            <div class="glass-input-node">
+                <div class="form-title-wrapper" style="margin-bottom: 2rem;">
+                    <h2>Audition Profiling System</h2>
+                    <p>Enter your profile metrics directly into the active terminal stream.</p>
+                </div>
+
+                <form action="#" method="POST">
+                    <div class="form-row-split">
+                        <div class="input-container">
+                            <label><i class="fa-solid fa-user"></i> Full Name</label>
+                            <input type="text" name="name" required placeholder="Ex. Marie Curie">
+                        </div>
+                        <div class="input-container">
+                            <label><i class="fa-solid fa-graduation-cap"></i> Academic Year</label>
+                            <select name="year" required>
+                                <option value="" disabled selected>Select Year</option>
+                                <option value="1">1st Year</option>
+                                <option value="2">2nd Year</option>
+                                <option value="3">3rd Year</option>
+                                <option value="4">4th Year</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row-split">
+                        <div class="input-container">
+                            <label><i class="fa-solid fa-layer-group"></i> Branch Structure</label>
+                            <input type="text" name="branch" required placeholder="Ex. CSE, ECE, AI">
+                        </div>
+                        <div class="input-container">
+                            <label><i class="fa-solid fa-id-badge"></i> Roll Identifier</label>
+                            <input type="text" name="roll_number" required placeholder="Ex. 24CS1002">
+                        </div>
+                    </div>
+
+                    <h4 style="margin: 1.5rem 0 1rem; color: var(--brand-orange); letter-spacing: 1px; font-size: 0.8rem; text-transform: uppercase;">Domain Tier Settings</h4>
+                    <div class="priority-tri-layout">
+                        <div class="input-container p-card">
+                            <label><span class="p-tag t1">P1</span> Primary Choice</label>
+                            <select name="priority_1" required>
+                                <option value="" disabled selected>Select Domain</option>
+                                <option value="tech">Technical Division (Development/ML)</option>
+                                <option value="creative">Creative Wing (Design/Video)</option>
+                                <option value="mgmt">Management (PR/Operations)</option>
+                            </select>
+                        </div>
+                        <div class="input-container p-card">
+                            <label><span class="p-tag t2">P2</span> Secondary Choice</label>
+                            <select name="priority_2" required>
+                                <option value="" disabled selected>Select Domain</option>
+                                <option value="tech">Technical Division (Development/ML)</option>
+                                <option value="creative">Creative Wing (Design/Video)</option>
+                                <option value="mgmt">Management (PR/Operations)</option>
+                            </select>
+                        </div>
+                        <div class="input-container p-card">
+                            <label><span class="p-tag t3">P3</span> Tertiary Choice</label>
+                            <select name="priority_3" required>
+                                <option value="" disabled selected>Select Domain</option>
+                                <option value="tech">Technical Division (Development/ML)</option>
+                                <option value="creative">Creative Wing (Design/Video)</option>
+                                <option value="mgmt">Management (PR/Operations)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <h4 style="margin: 1.5rem 0 1rem; color: var(--brand-orange); letter-spacing: 1px; font-size: 0.8rem; text-transform: uppercase;">Background Record</h4>
+                    
+                    <div class="input-container">
+                        <label>Relative Club Priority Placement</label>
+                        <input type="text" name="club_priority" placeholder="Where does SAI Cell stand among your general preferences?">
+                    </div>
+
+                    <div class="input-container">
+                        <label>Historical Production Footprint (Experience)</label>
+                        <textarea name="experience" rows="2" placeholder="List any projects built, management events handled, or active portfolios..."></textarea>
+                    </div>
+
+                    <div class="input-container">
+                        <label>Statement of Intent (Why SAI Cell?)</label>
+                        <textarea name="why_join" rows="3" required placeholder="Detail your core motivation for applying to this platform..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-form-send">TRANSMIT DATA STREAM</button>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
