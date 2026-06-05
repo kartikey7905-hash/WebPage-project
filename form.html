@@ -1,114 +1,301 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Application Intake | SAI Cell</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <canvas id="ambient-mesh"></canvas>
 
     <div class="app-container show-interface">
-        <header class="navbar">
-            <div class="logo-brand">
-                <span class="orange-text">SAI</span><span class="white-text">CELL</span>
+      <header class="navbar">
+        <div class="logo-brand">
+          <span class="orange-text">SAI</span
+          ><span class="white-text">CELL</span>
+        </div>
+        <nav class="nav-links">
+          <a href="./index.html" class="nav-item">BACK TO BASE</a>
+        </nav>
+      </header>
+
+      <main class="form-center-box">
+        <div class="glass-input-node">
+          <div class="form-title-wrapper" style="margin-bottom: 2rem">
+            <h2>Audition Profiling System</h2>
+            <p>
+              Enter your profile metrics directly into the active terminal
+              stream.
+            </p>
+          </div>
+          <form id="auditionForm">
+            <div class="form-row-split">
+              <div class="input-container">
+                <label><i class="fa-solid fa-user"></i> Full Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  placeholder="Ex. Marie Curie"
+                />
+              </div>
+              <div class="input-container">
+                <label
+                  ><i class="fa-solid fa-graduation-cap"></i> Academic
+                  Year</label
+                >
+                <select name="year" required>
+                  <option value="" disabled selected>Select Year</option>
+                  <option value="1">1st Year</option>
+                  <option value="2">2nd Year</option>
+                </select>
+              </div>
             </div>
-            <nav class="nav-links">
-                <a href="./index.html" class="nav-item">BACK TO BASE</a>
-            </nav>
-        </header>
 
-        <main class="form-center-box">
-            <div class="glass-input-node">
-                <div class="form-title-wrapper" style="margin-bottom: 2rem;">
-                    <h2>Audition Profiling System</h2>
-                    <p>Enter your profile metrics directly into the active terminal stream.</p>
-                </div>
-
-                <form action="#" method="POST">
-                    <div class="form-row-split">
-                        <div class="input-container">
-                            <label><i class="fa-solid fa-user"></i> Full Name</label>
-                            <input type="text" name="name" required placeholder="Ex. Marie Curie">
-                        </div>
-                        <div class="input-container">
-                            <label><i class="fa-solid fa-graduation-cap"></i> Academic Year</label>
-                            <select name="year" required>
-                                <option value="" disabled selected>Select Year</option>
-                                <option value="1">1st Year</option>
-                                <option value="2">2nd Year</option>
-                                <option value="3">3rd Year</option>
-                                <option value="4">4th Year</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-row-split">
-                        <div class="input-container">
-                            <label><i class="fa-solid fa-layer-group"></i> Branch Structure</label>
-                            <input type="text" name="branch" required placeholder="Ex. CSE, ECE, AI">
-                        </div>
-                        <div class="input-container">
-                            <label><i class="fa-solid fa-id-badge"></i> Roll Identifier</label>
-                            <input type="text" name="roll_number" required placeholder="Ex. 24CS1002">
-                        </div>
-                    </div>
-
-                    <h4 style="margin: 1.5rem 0 1rem; color: var(--brand-orange); letter-spacing: 1px; font-size: 0.8rem; text-transform: uppercase;">Domain Tier Settings</h4>
-                    <div class="priority-tri-layout">
-                        <div class="input-container p-card">
-                            <label><span class="p-tag t1">P1</span> Primary Choice</label>
-                            <select name="priority_1" required>
-                                <option value="" disabled selected>Select Domain</option>
-                                <option value="tech">Technical Division (Development/ML)</option>
-                                <option value="creative">Creative Wing (Design/Video)</option>
-                                <option value="mgmt">Management (PR/Operations)</option>
-                            </select>
-                        </div>
-                        <div class="input-container p-card">
-                            <label><span class="p-tag t2">P2</span> Secondary Choice</label>
-                            <select name="priority_2" required>
-                                <option value="" disabled selected>Select Domain</option>
-                                <option value="tech">Technical Division (Development/ML)</option>
-                                <option value="creative">Creative Wing (Design/Video)</option>
-                                <option value="mgmt">Management (PR/Operations)</option>
-                            </select>
-                        </div>
-                        <div class="input-container p-card">
-                            <label><span class="p-tag t3">P3</span> Tertiary Choice</label>
-                            <select name="priority_3" required>
-                                <option value="" disabled selected>Select Domain</option>
-                                <option value="tech">Technical Division (Development/ML)</option>
-                                <option value="creative">Creative Wing (Design/Video)</option>
-                                <option value="mgmt">Management (PR/Operations)</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <h4 style="margin: 1.5rem 0 1rem; color: var(--brand-orange); letter-spacing: 1px; font-size: 0.8rem; text-transform: uppercase;">Background Record</h4>
-                    
-                    <div class="input-container">
-                        <label>Relative Club Priority Placement</label>
-                        <input type="text" name="club_priority" placeholder="Where does SAI Cell stand among your general preferences?">
-                    </div>
-
-                    <div class="input-container">
-                        <label>Historical Production Footprint (Experience)</label>
-                        <textarea name="experience" rows="2" placeholder="List any projects built, management events handled, or active portfolios..."></textarea>
-                    </div>
-
-                    <div class="input-container">
-                        <label>Statement of Intent (Why SAI Cell?)</label>
-                        <textarea name="why_join" rows="3" required placeholder="Detail your core motivation for applying to this platform..."></textarea>
-                    </div>
-
-                    <button type="submit" class="btn-form-send">TRANSMIT DATA STREAM</button>
-                </form>
+            <div class="form-row-split">
+              <div class="input-container">
+                <label
+                  ><i class="fa-solid fa-layer-group"></i> Branch
+                  Structure</label
+                >
+                <input
+                  type="text"
+                  name="branch"
+                  required
+                  placeholder="Ex. CSE, ECE, MnC"
+                />
+              </div>
+              <div class="input-container">
+                <label
+                  ><i class="fa-solid fa-id-badge"></i> Roll Identifier</label
+                >
+                <input
+                  type="text"
+                  name="roll_number"
+                  required
+                  placeholder="Ex. 25G80152"
+                />
+              </div>
             </div>
-        </main>
+
+            <div class="form-row-split">
+              <div class="input-container">
+                <label><i class="fa-solid fa-envelope"></i> College Email</label>
+                <input
+                  type="text"
+                  name="email"
+                  required
+                  placeholder="Ex. kk.25U10855@nitdgp.ac.in"
+                />
+              </div>
+              <div class="input-container">
+                <label><i class="fa-solid fa-phone"></i> Contact</label>
+                <input
+                  type="text"
+                  name="contact"
+                  required
+                  pattern="[0-9]{10}"
+                  placeholder="Ex. 639243 * * * *"
+                />
+              </div>
+            </div>
+
+            <div class="form-row-split">
+              <div class="input-container">
+                <label
+                  ><i class="fa-brands fa-github"></i> GitHub Profile
+                  (Optional)</label
+                >
+                <input
+                  type="url"
+                  name="github_link"
+                  placeholder="https://github.com/yourusername"
+                />
+              </div>
+              <div class="input-container">
+                <label
+                  ><i class="fa-solid fa-link"></i> Portfolio / LinkedIn
+                  (Optional)</label
+                >
+                <input
+                  type="url"
+                  name="portfolio_link"
+                  placeholder="Link to your resume, design portfolio, or LinkedIn"
+                />
+              </div>
+            </div>
+
+            <h4
+              style="
+                margin: 1.5rem 0 1rem;
+                color: var(--brand-orange);
+                letter-spacing: 1px;
+                font-size: 0.8rem;
+                text-transform: uppercase;
+              "
+            >
+              Domain Tier Settings
+            </h4>
+            <div class="priority-tri-layout">
+              <div class="input-container p-card">
+                <label><span class="p-tag t1">P1</span> Primary Choice</label>
+                <select name="priority_1" required class="priorityForChoice">
+                  <option value="" disabled selected>Select Domain</option>
+                  <option value="tech">Web development</option>
+                  <option value="creative">Video editing</option>
+                  <option value="mgmt">Graphic designing</option>
+                  <option value="tech">Anchoring</option>
+                  <option value="creative">Event Management</option>
+                </select>
+              </div>
+              <div class="input-container p-card">
+                <label><span class="p-tag t2">P2</span> Secondary Choice</label>
+                <select name="priority_2">
+                  <option value="" disabled selected>Select Domain</option>
+                  <option value="tech">Web development</option>
+                  <option value="creative">Video editing</option>
+                  <option value="mgmt">Graphic designing</option>
+                  <option value="tech">Anchoring</option>
+                  <option value="creative">Event Management</option>
+                </select>
+              </div>
+              <div class="input-container p-card">
+                <label><span class="p-tag t3">P3</span> Tertiary Choice</label>
+                <select name="priority_3">
+                  <option value="" disabled selected>Select Domain</option>
+                  <option value="tech">Web development</option>
+                  <option value="creative">Video editing</option>
+                  <option value="mgmt">Graphic designing</option>
+                  <option value="tech">Anchoring</option>
+                  <option value="creative">Event Management</option>
+                </select>
+              </div>
+            </div>
+
+            <h4
+              style="
+                margin: 1.5rem 0 1rem;
+                color: var(--brand-orange);
+                letter-spacing: 1px;
+                font-size: 0.8rem;
+                text-transform: uppercase;
+              "
+            >
+              Other Details
+            </h4>
+
+            <div class="input-container">
+              <label>About Yourself</label>
+              <textarea
+                name="about_yourself"
+                rows="3"
+                required
+                placeholder="Ex. I am Marie Curie and got Nobel Prize twice in my life..."
+              ></textarea>
+            </div>
+
+            <div class="input-container">
+              <label>Relative Club Priority Placement</label>
+              <textarea
+                type="text"
+                name="club_priority"
+                required
+                placeholder="Where does SAI Cell stand among your general preferences?"
+              ></textarea>
+            </div>
+
+            <div class="input-container">
+              <label>Experience & Projects</label>
+              <textarea
+                name="experience"
+                rows="2"
+                required
+                placeholder="Detail your technical skills, past projects, or events you have managed. Include your role and the technologies used."
+              ></textarea>
+            </div>
+
+            <div class="input-container">
+              <label>Statement of Intent (Why SAI Cell?)</label>
+              <textarea
+                name="why_join"
+                rows="3"
+                required
+                placeholder="Detail your core motivation for applying to this platform..."
+              ></textarea>
+            </div>
+
+            <div class="input-container">
+              <label>Core Technical / Creative Competencies</label>
+              <textarea
+                type="text"
+                name="club_priority"
+                required
+                placeholder="List your strongest skills separated by commas (e.g., Python, React, Premiere Pro, Event Planning)."
+              ></textarea>
+            </div>
+
+            <div class="input-container">
+              <label>Team Dynamics & Challenges</label>
+              <textarea
+                type="text"
+                name="club_priority"
+                required
+                placeholder="Describe a time you faced a difficult challenge on a project or in a team. How did you resolve it?"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-form-send">
+              TRANSMIT DATA STREAM
+            </button>
+          </form>
+        </div>
+      </main>
     </div>
-</body>
+  </body>
 </html>
+
+<script>
+  document
+    .getElementById("auditionForm")
+    .addEventListener("submit", function (e) {
+      e.preventDefault(); // STOPS the page from refreshing
+
+      const submitButton = document.querySelector(".btn-form-send");
+      submitButton.innerText = "TRANSMITTING DATA...";
+      submitButton.disabled = true;
+
+      // 1. Get the data
+      const formData = new FormData(this);
+
+      // 2. THE FIX: Convert the data so Google Apps Script can actually read it!
+      const data = new URLSearchParams(formData);
+
+      // 3. Send it to Google
+      fetch(
+        "https://script.google.com/macros/s/AKfycbwqYXfoA1FQZ_ZK4-DN_Y7_yU7uWzwPKUaJx95bLxkJLPU826-uJx9j6E52mmM3DBw/exec",
+        {
+          method: "POST",
+          body: data, // Sending the converted data
+          mode: "no-cors", // Bypassing Google's strict security blocks
+        },
+      )
+        .then(() => {
+          // Because of no-cors, this triggers immediately after the network sends the data
+          alert(
+            "Submission successful!",
+          );
+          window.location.href = "https://www.alumninitdgp.in/";
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          alert("Something went wrong. Please try again.");
+          submitButton.innerText = "TRANSMIT DATA STREAM";
+          submitButton.disabled = false;
+        });
+    });
+</script>

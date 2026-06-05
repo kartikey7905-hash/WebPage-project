@@ -301,7 +301,11 @@ body {
 .form-center-box { display: flex; justify-content: center; margin: auto 0; }
 .glass-input-node { background: var(--glass-surface); border: 1px solid var(--line-glow); border-radius: 12px; padding: 3rem; width: 100%; max-width: 800px; position: relative; }
 .form-row-split { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-.priority-tri-layout { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.priority-tri-layout { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 1rem; 
+}
 
 .input-container { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem; }
 .input-container label { font-size: 0.7rem; font-weight: 700; color: var(--text-sub); text-transform: uppercase; }
@@ -328,4 +332,30 @@ body {
     .hero-split-grid { grid-template-columns: 1fr; }
     .app-container { padding: 1.5rem; }
     .form-row-split, .priority-tri-layout { grid-template-columns: 1fr; }
+    .glass-input-node {
+        padding: 1.5rem; /* This gives your inputs much more room to breathe on phones */
+    }
+}
+.logo-image {
+    width: 45px; 
+    height: auto; 
+}
+.priorityForChoice {
+    background-color: #020305;
+}
+/* Change the background of the dropdown options */
+.input-container select option {
+    background-color: rgb(24, 23, 37); /* Makes it dark */
+    color: var(--text-main); /* Makes the text white */
+}
+
+/* Add this anywhere in your style.css */
+.social-icon {
+    font-size: 1.4rem; /* Makes the icons a bit larger and easier to click */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    color: var(--brand-orange); /* Makes them glow orange when hovered */
+    transform: translateY(-2px); /* Gives a slight "lift" effect */
 }
