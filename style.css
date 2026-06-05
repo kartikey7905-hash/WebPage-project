@@ -360,43 +360,85 @@ body {
     transform: translateY(-2px); /* Gives a slight "lift" effect */
 }
 .footer {
-    background-color: #000;
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
+  background: #080808;
+  border: 1px solid #ff5a1f;
+  border-radius: 20px;
+  padding: 40px;
+  color: white;
+  margin-top: 50px;
 }
 
-.footer h2 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    font-weight: bold;
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
 }
 
-.tagline {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    color: #ddd;
+.footer-left h2 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.footer-left h2 {
+  color: #ff5a1f;
+}
+
+.subtitle {
+  letter-spacing: 3px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.description {
+  max-width: 500px;
+  line-height: 1.8;
+  color: #ddd;
+}
+
+.footer-right h3 {
+  color: #ff5a1f;
+  margin-bottom: 25px;
 }
 
 .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-bottom: 30px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .social-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: 0.3s;
+  text-decoration: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.instagram {
+  background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
+}
+
+.linkedin {
+  background: #0077b5;
+}
+
+.facebook {
+  background: #1877f2;
 }
 
 .social-links a:hover {
-    color: orange;
+  transform: translateY(-3px);
 }
 
-.copyright {
-    color: #aaa;
-    font-size: 1rem;
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.15);
+  margin-top: 30px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: #ccc;
 }
