@@ -359,86 +359,107 @@ body {
     color: var(--brand-orange); /* Makes them glow orange when hovered */
     transform: translateY(-2px); /* Gives a slight "lift" effect */
 }
-.footer {
-  background: #080808;
-  border: 1px solid #ff5a1f;
-  border-radius: 20px;
-  padding: 40px;
-  color: white;
-  margin-top: 50px;
+.footer{
+    background:#0d1b2a;
+    color:white;
+    padding:50px 8%;
+    font-family:Arial,sans-serif;
 }
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  gap: 50px;
-  flex-wrap: wrap;
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:40px;
 }
 
-.footer-left h2 {
-  font-size: 42px;
-  margin-bottom: 10px;
+.footer-column{
+    flex:1;
+    min-width:250px;
 }
 
-.footer-left h2 {
-  color: #ff5a1f;
+.footer h2{
+    color:#ff6b6b;
+    font-size:36px;
+    margin-bottom:10px;
 }
 
-.subtitle {
-  letter-spacing: 3px;
-  color: #ccc;
-  margin-bottom: 20px;
+.subtitle{
+    letter-spacing:2px;
+    color:#d1d1d1;
+    margin-bottom:20px;
 }
 
-.description {
-  max-width: 500px;
-  line-height: 1.8;
-  color: #ddd;
+.description{
+    line-height:1.8;
+    color:#cfcfcf;
 }
 
-.footer-right h3 {
-  color: #ff5a1f;
-  margin-bottom: 25px;
+.footer h3{
+    margin-bottom:20px;
 }
 
-.social-links {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
+.footer ul{
+    list-style:none;
+    padding:0;
 }
 
-.social-links a {
-  text-decoration: none;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 10px;
-  font-weight: 600;
-  transition: 0.3s;
+.footer ul li{
+    margin-bottom:12px;
 }
 
-.instagram {
-  background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
+.footer ul li a{
+    color:white;
+    text-decoration:none;
 }
 
-.linkedin {
-  background: #0077b5;
+.footer ul li a:hover{
+    color:#00c6ff;
 }
 
-.facebook {
-  background: #1877f2;
+.social-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
 }
 
-.social-links a:hover {
-  transform: translateY(-3px);
+.social-buttons a{
+    text-decoration:none;
+    color:white;
+    padding:12px 22px;
+    border-radius:10px;
+    font-weight:600;
 }
 
-.footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.15);
-  margin-top: 30px;
-  padding-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
-  color: #ccc;
+.instagram{
+    background:linear-gradient(45deg,#ff512f,#dd2476);
+}
+
+.linkedin{
+    background:#0A66C2;
+}
+
+.facebook{
+    background:#1877F2;
+}
+
+hr{
+    border:none;
+    border-top:1px solid rgba(255,255,255,0.2);
+    margin:30px 0;
+}
+
+.footer-bottom{
+    text-align:center;
+    color:#d1d1d1;
+}
+
+@media(max-width:768px){
+    .footer-container{
+        flex-direction:column;
+    }
+
+    .social-buttons{
+        justify-content:flex-start;
+    }
 }
