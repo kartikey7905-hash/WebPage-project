@@ -711,3 +711,86 @@ body {
         font-size: 0.7rem;
     }
 }
+/* ==========================================================================
+   📱 MOBILE RESPONSIVENESS FIXES
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* 1. Container & Padding Adjustments */
+    .app-container {
+        padding: 1.5rem; /* Reduces side padding to give content more room */
+    }
+
+    /* 2. Navbar Clean Up */
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+    
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .nav-item {
+        font-size: 0.7rem; /* Shrinks text slightly to prevent awkward line breaks */
+    }
+
+    .nav-btn-wrapper {
+        width: 100%;
+    }
+
+    .btn-nav-action {
+        width: 100%; /* Makes the apply button stretch across the screen */
+        margin-top: 0.5rem;
+    }
+
+    /* 3. Hero Typography & Spacing */
+    .main-headline {
+        font-size: 2.5rem; /* Prevents giant text from breaking words */
+        line-height: 1.1;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+    }
+
+    /* 4. Full-Width Action Buttons */
+    .action-cluster {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .action-cluster a, 
+    .action-cluster button {
+        width: 100%;
+    }
+
+    /* 5. Fix the Floating Button Overlap */
+    .floating-corner-anchor {
+        bottom: 15px;
+        right: 15px;
+        transform: scale(0.8); /* Shrinks the floating button by 20% */
+    }
+
+    /* Gives the card extra padding at the bottom so the floating button doesn't hide text */
+    .hologram-glass-card {
+        padding: 1.5rem;
+        margin-bottom: 70px; 
+    }
+}
+
+/* Ultra-Small Screen Optimization (Screens under 400px) */
+@media (max-width: 400px) {
+    .main-headline {
+        font-size: 2.2rem;
+    }
+
+    .nav-links {
+        gap: 0.75rem; 
+    }
+}
