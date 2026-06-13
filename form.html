@@ -39,7 +39,7 @@
                 <label><i class="fa-solid fa-user"></i> Full Name</label>
                 <input
                   type="text"
-                  name="name"
+                  name="FULL NAME"
                   required
                   placeholder="Ex. Marie Curie"
                 />
@@ -49,7 +49,7 @@
                   ><i class="fa-solid fa-graduation-cap"></i> Academic
                   Year</label
                 >
-                <select name="year" required>
+                <select name="ACADEMIC YEAR" required>
                   <option value="" disabled selected>Select Year</option>
                   <option value="1">1st Year</option>
                   <option value="2">2nd Year</option>
@@ -65,7 +65,7 @@
                 >
                 <input
                   type="text"
-                  name="branch"
+                  name="BRANCH"
                   required
                   placeholder="Ex. CSE, ECE, MnC"
                 />
@@ -76,7 +76,7 @@
                 >
                 <input
                   type="text"
-                  name="roll_number"
+                  name="ROLL NUMBER"
                   required
                   placeholder="Ex. 25G80152"
                 />
@@ -88,7 +88,7 @@
                 <label><i class="fa-solid fa-envelope"></i> College Email</label>
                 <input
                   type="text"
-                  name="email"
+                  name="COLLEGE EMAIL"
                   required
                   placeholder="Ex. kk.25U10855@nitdgp.ac.in"
                 />
@@ -97,7 +97,7 @@
                 <label><i class="fa-solid fa-phone"></i> Contact</label>
                 <input
                   type="text"
-                  name="contact"
+                  name="PHONE NUMBER"
                   required
                   pattern="[0-9]{10}"
                   placeholder="Ex. 639243 * * * *"
@@ -144,7 +144,7 @@
             <div class="priority-tri-layout">
               <div class="input-container p-card">
                 <label><span class="p-tag t1">P1</span> Primary Choice</label>
-                <select name="priority_1" required class="priorityForChoice">
+                <select name="PRIMARY CHOICE" required class="priorityForChoice">
                   <option value="" disabled selected>Select Domain</option>
                   <option value="tech">Web development</option>
                   <option value="creative">Video editing</option>
@@ -155,7 +155,7 @@
               </div>
               <div class="input-container p-card">
                 <label><span class="p-tag t2">P2</span> Secondary Choice</label>
-                <select name="priority_2">
+                <select name="SECONDARY CHOICE">
                   <option value="" disabled selected>Select Domain</option>
                   <option value="tech">Web development</option>
                   <option value="creative">Video editing</option>
@@ -166,7 +166,7 @@
               </div>
               <div class="input-container p-card">
                 <label><span class="p-tag t3">P3</span> Tertiary Choice</label>
-                <select name="priority_3">
+                <select name="TERTIARY CHOICE">
                   <option value="" disabled selected>Select Domain</option>
                   <option value="tech">Web development</option>
                   <option value="creative">Video editing</option>
@@ -192,7 +192,7 @@
             <div class="input-container">
               <label>About Yourself</label>
               <textarea
-                name="about_yourself"
+                name="ABOUT THEMSELVES"
                 rows="3"
                 required
                 placeholder="Ex. I am Marie Curie and got Nobel Prize twice in my life..."
@@ -203,7 +203,7 @@
               <label>Relative Club Priority Placement</label>
               <textarea
                 type="text"
-                name="club_priority"
+                name="CLUB PREFERENCE"
                 required
                 placeholder="Where does SAI Cell stand among your general preferences?"
               ></textarea>
@@ -212,7 +212,7 @@
             <div class="input-container">
               <label>Experience & Projects</label>
               <textarea
-                name="experience"
+                name="EXPERIENCE and PROJECTS"
                 rows="2"
                 required
                 placeholder="Detail your technical skills, past projects, or events you have managed. Include your role and the technologies used."
@@ -222,7 +222,7 @@
             <div class="input-container">
               <label>Statement of Intent (Why SAI Cell?)</label>
               <textarea
-                name="why_join"
+                name="WHY SAI CELL?"
                 rows="3"
                 required
                 placeholder="Detail your core motivation for applying to this platform..."
@@ -233,7 +233,7 @@
               <label>Core Technical / Creative Competencies</label>
               <textarea
                 type="text"
-                name="club_priority"
+                name="SKILLS"
                 required
                 placeholder="List your strongest skills separated by commas (e.g., Python, React, Premiere Pro, Event Planning)."
               ></textarea>
@@ -243,7 +243,7 @@
               <label>Team Dynamics & Challenges</label>
               <textarea
                 type="text"
-                name="club_priority"
+                name="TEAM WORK and CHALLENGES"
                 required
                 placeholder="Describe a time you faced a difficult challenge on a project or in a team. How did you resolve it?"
               ></textarea>
@@ -277,7 +277,7 @@
 
       // 3. Send it to Google
       fetch(
-        "https://script.google.com/macros/s/AKfycbwIRI7r3fFsHaXhZ_di_8jArug-elPKDmBi_XttMNLJaSX9uX3frjE-6qykLNCKxDPQdA/exec",
+        "https://script.google.com/macros/s/AKfycbzkOjfuRT4Uetb7R6jpp_MAHInIMt-7AEw5d6ldX2Z-nl0wQZhf6DmoiVVP5SO1oykyOg/exec",
         {
           method: "POST",
           body: data, // Sending the converted data
