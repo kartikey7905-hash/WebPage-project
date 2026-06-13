@@ -1,25 +1,83 @@
-/* ==========================
-   JOURNEY HERO
-========================== */
+/* ==========================================================================
+   JOURNEY HERO (BASE / DESKTOP)
+========================================================================== */
+.journey-hero {
+    min-height: auto; /* Removed 100vh so it stops stretching infinitely */
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 80px;
+    padding: 180px 5% 60px 5%; /* Gives it breathing room at the top, but tightens the bottom */
+}
 
-/* HERO LAYOUT */
+.journey-content {
+    max-width: 600px;
+}
 
-.captured-moments {
-    padding: 8% 5%;              
+.journey-heading {
+    font-size: clamp(3rem, 5vw + 1rem, 6rem);
+    font-weight: 800;
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.journey-description {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.journey-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.journey-image-frame {
+    width: 100%;
+    max-width: 850px;
+    aspect-ratio: 85 / 55;
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255, 107, 44, 0.25);
+    box-shadow: 0 0 25px rgba(255, 107, 44, 0.15), 0 0 80px rgba(255, 107, 44, 0.08);
+}
+
+.journey-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.journey-image-frame::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.1));
+}
+
+/* ==========================================================================
+   CAPTURED MOMENTS (SLIDER)
+========================================================================== */
+.captured-moments { 
+    padding: 20px 5% 8% 5%; /* Shrinks the top gap so the sections sit closer together */
 }
 
 .section-tag {
     color: #ff6b2c;
-    border: 1px solid rgba(255,107,44,.4);
+    border: 1px solid rgba(255, 107, 44, 0.4);
     padding: 8px 18px;
     border-radius: 30px;
-    font-size: .75rem;
+    font-size: 0.75rem;
     letter-spacing: 2px;
 }
 
 .section-header h2 {
     margin-top: 20px;
-    font-size: clamp(2rem, 4vw, 3rem); 
+    font-size: clamp(2rem, 4vw, 3rem);
     color: white;
 }
 
@@ -34,8 +92,8 @@
     justify-content: center;
     gap: 15px;
     width: 100%;
-    max-width: 900px; 
-    margin-inline: auto; 
+    max-width: 1000px;
+    margin-inline: auto;
 }
 
 .slider {
@@ -44,7 +102,8 @@
     overflow-x: auto;
     scroll-behavior: smooth;
     scrollbar-width: none;
-    scroll-snap-type: x mandatory; 
+    scroll-snap-type: x mandatory;
+    gap: 20px;
 }
 
 .slider::-webkit-scrollbar {
@@ -52,19 +111,19 @@
 }
 
 .slider img {
-    flex: 0 0 100%; 
+    flex: 0 0 100%;
     width: 100%;
-    aspect-ratio: 50 / 32;       
+    aspect-ratio: 50 / 32;
     object-fit: cover;
     border-radius: 18px;
-    border: 1px solid rgba(255,107,44,.2);
-    scroll-snap-align: center;   
-    transition: .3s;
+    border: 1px solid rgba(255, 107, 44, 0.2);
+    scroll-snap-align: center;
+    transition: 0.3s;
 }
 
 .slider img:hover {
     transform: scale(1.01);
-    box-shadow: 0 0 20px rgba(255,107,44,.2);
+    box-shadow: 0 0 20px rgba(255, 107, 44, 0.2);
 }
 
 .slide-btn {
@@ -79,16 +138,15 @@
     flex-shrink: 0;
 }
 
-/* ==========================
-   MEDIA QUERIES (MOBILE & TABLET)
-
-/* Tablets and smaller screens */
+/* ==========================================================================
+   MEDIA QUERIES (MUST BE AT THE VERY BOTTOM)
+========================================================================== */
 @media (max-width: 992px) {
     .journey-hero {
-        flex-direction: column;  
+        grid-template-columns: 1fr;
         text-align: center;
         justify-content: center;
-        padding-top: 120px;      
+        padding-top: 120px;
     }
 
     .journey-content {
@@ -97,13 +155,8 @@
     }
 }
 
-/* Mobile Phones */
 @media (max-width: 768px) {
-    .journey-hero {
-        padding: 15% 5%;
-    }
-    
-    .captured-moments {
+    .journey-hero, .captured-moments {
         padding: 15% 5%;
     }
 
@@ -116,189 +169,8 @@
         height: 40px;
         font-size: 1rem;
     }
-    
+
     .slider {
-        gap: 15px; 
+        gap: 15px;
     }
-}
-
-.journey-hero{
-    min-height:100vh;
-
-    display:grid;
-    grid-template-columns:0.9fr 1.1fr;
-
-    align-items:center;
-
-    gap:80px;
-
-    padding:60px 80px;
-}
-
-/* LEFT SIDE */
-
-.journey-heading{
-    font-size:6rem;
-    font-weight:800;
-    line-height:0.95;
-
-    margin-bottom:25px;
-}
-
-.journey-description{
-    color:rgba(255,255,255,0.7);
-
-    font-size:1.1rem;
-    line-height:1.8;
-
-    margin-bottom:35px;
-}
-
-/* RIGHT SIDE IMAGE */
-
-.journey-right{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.journey-image-frame{
-    width:850px;
-    max-width:850px;
-
-    height:550px;
-
-    border-radius:24px;
-
-    overflow:hidden;
-
-    position:relative;
-
-    border:1px solid rgba(255,107,44,.25);
-
-    box-shadow:
-        0 0 25px rgba(255,107,44,.15),
-        0 0 80px rgba(255,107,44,.08);
-}
-
-.journey-image{
-    width:100%;
-    height:100%;
-
-    object-fit:cover;
-}
-
-/* DARK OVERLAY */
-
-.journey-image-frame::after{
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-    linear-gradient(
-        to top,
-        rgba(0,0,0,.45),
-        rgba(0,0,0,.1)
-    );
-}
-.captured-moments{
-    padding:100px 80px;
-}
-
-.section-tag{
-    color:#ff6b2c;
-
-    border:1px solid rgba(255,107,44,.4);
-
-    padding:8px 18px;
-
-    border-radius:30px;
-
-    font-size:.75rem;
-
-    letter-spacing:2px;
-}
-
-.section-header h2{
-    margin-top:20px;
-
-    font-size:3rem;
-
-    color:white;
-}
-
-.section-header span{
-    color:#ff6b2c;
-}
-
-.slider-wrapper{
-    margin-top:50px;
-
-    display:flex;
-
-    align-items:center;
-
-    gap:20px;
-}
-
-.slider{
-    display:flex;
-
-    width:1100px;
-
-    gap:25px;
-
-    overflow-x:auto;
-
-    scroll-behavior:smooth;
-
-    scrollbar-width:none;
-}
-
-.slider::-webkit-scrollbar{
-    display:none;
-}
-
-.slider img{
-    width:500px;
-
-    height:320px;
-
-    object-fit:cover;
-
-    border-radius:18px;
-
-    border:1px solid rgba(255,107,44,.2);
-
-    flex-shrink:0;
-
-    transition:.3s;
-}
-
-.slider img:hover{
-    transform:scale(1.03);
-
-    box-shadow:
-    0 0 20px rgba(255,107,44,.2);
-}
-
-.slide-btn{
-    width:50px;
-
-    height:50px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:#111;
-
-    color:#ff6b2c;
-
-    cursor:pointer;
-
-    font-size:1.2rem;
 }
