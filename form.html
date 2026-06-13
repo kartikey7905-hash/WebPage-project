@@ -277,11 +277,11 @@
 
       // 3. Send it to Google
       fetch(
-        "https://script.google.com/macros/s/AKfycbyMQgyXDvwvbZHaXDUITLceBg0Dnyojrc35gZ1QcvXhyUlM9krJ3u3chI0hyhMcpeb8EQ/exec",
+        "https://script.google.com/macros/s/AKfycbyHyvFHraS2LFUl-gFxiXn4o4vXW26scSNGyY9mj3q0VNjyPEL46wj-M4qbLDk9BuLVpQ/exec",
         {
           method: "POST",
-          body: data, // Sending the converted data
-          mode: "no-cors", // Bypassing Google's strict security blocks
+          body: data,
+          mode: "no-cors",
         },
       )
         .then(() => {
