@@ -39,7 +39,7 @@
                 <label><i class="fa-solid fa-user"></i> Full Name</label>
                 <input
                   type="text"
-                  name="name"
+                  name="FULL NAME"
                   required
                   placeholder="Ex. Marie Curie"
                 />
@@ -49,7 +49,7 @@
                   ><i class="fa-solid fa-graduation-cap"></i> Academic
                   Year</label
                 >
-                <select name="year" required>
+                <select name="ACADEMIC YEAR" required>
                   <option value="" disabled selected>Select Year</option>
                   <option value="1">1st Year</option>
                   <option value="2">2nd Year</option>
@@ -65,7 +65,7 @@
                 >
                 <input
                   type="text"
-                  name="branch"
+                  name="BRANCH"
                   required
                   placeholder="Ex. CSE, ECE, MnC"
                 />
@@ -76,7 +76,7 @@
                 >
                 <input
                   type="text"
-                  name="roll_number"
+                  name="ROLL NUMBER"
                   required
                   placeholder="Ex. 25G80152"
                 />
@@ -85,10 +85,12 @@
 
             <div class="form-row-split">
               <div class="input-container">
-                <label><i class="fa-solid fa-envelope"></i> College Email</label>
+                <label
+                  ><i class="fa-solid fa-envelope"></i> College Email</label
+                >
                 <input
                   type="text"
-                  name="email"
+                  name="COLLEGE EMAIL"
                   required
                   placeholder="Ex. kk.25U10855@nitdgp.ac.in"
                 />
@@ -97,7 +99,7 @@
                 <label><i class="fa-solid fa-phone"></i> Contact</label>
                 <input
                   type="text"
-                  name="contact"
+                  name="PHONE NUMBER"
                   required
                   pattern="[0-9]{10}"
                   placeholder="Ex. 639243 * * * *"
@@ -113,7 +115,7 @@
                 >
                 <input
                   type="url"
-                  name="github_link"
+                  name="GITHUB LINK"
                   placeholder="https://github.com/yourusername"
                 />
               </div>
@@ -124,7 +126,7 @@
                 >
                 <input
                   type="url"
-                  name="portfolio_link"
+                  name="PORTFOLIO LINK"
                   placeholder="Link to your resume, design portfolio, or LinkedIn"
                 />
               </div>
@@ -144,35 +146,39 @@
             <div class="priority-tri-layout">
               <div class="input-container p-card">
                 <label><span class="p-tag t1">P1</span> Primary Choice</label>
-                <select name="priority_1" required class="priorityForChoice">
+                <select
+                  name="PRIMARY CHOICE"
+                  required
+                  class="priorityForChoice"
+                >
                   <option value="" disabled selected>Select Domain</option>
-                  <option value="tech">Web development</option>
-                  <option value="creative">Video editing</option>
-                  <option value="mgmt">Graphic designing</option>
-                  <option value="tech">Anchoring</option>
-                  <option value="creative">Event Management</option>
+                  <option value="Web development">Web development</option>
+                  <option value="Video editing">Video editing</option>
+                  <option value="Graphic designing">Graphic designing</option>
+                  <option value="Anchoring">Anchoring</option>
+                  <option value="Event Management">Event Management</option>
                 </select>
               </div>
               <div class="input-container p-card">
                 <label><span class="p-tag t2">P2</span> Secondary Choice</label>
-                <select name="priority_2">
+                <select name="SECONDARY CHOICE">
                   <option value="" disabled selected>Select Domain</option>
-                  <option value="tech">Web development</option>
-                  <option value="creative">Video editing</option>
-                  <option value="mgmt">Graphic designing</option>
-                  <option value="tech">Anchoring</option>
-                  <option value="creative">Event Management</option>
+                  <option value="Web development">Web development</option>
+                  <option value="Video editing">Video editing</option>
+                  <option value="Graphic designing">Graphic designing</option>
+                  <option value="Anchoring">Anchoring</option>
+                  <option value="Event Management">Event Management</option>
                 </select>
               </div>
               <div class="input-container p-card">
                 <label><span class="p-tag t3">P3</span> Tertiary Choice</label>
-                <select name="priority_3">
+                <select name="TERTIARY CHOICE">
                   <option value="" disabled selected>Select Domain</option>
-                  <option value="tech">Web development</option>
-                  <option value="creative">Video editing</option>
-                  <option value="mgmt">Graphic designing</option>
-                  <option value="tech">Anchoring</option>
-                  <option value="creative">Event Management</option>
+                  <option value="Web development">Web development</option>
+                  <option value="Video editing">Video editing</option>
+                  <option value="Graphic designing">Graphic designing</option>
+                  <option value="Anchoring">Anchoring</option>
+                  <option value="Event Management">Event Management</option>
                 </select>
               </div>
             </div>
@@ -192,18 +198,17 @@
             <div class="input-container">
               <label>About Yourself</label>
               <textarea
-                name="about_yourself"
+                name="ABOUT THEMSELVES"
                 rows="3"
                 required
-                placeholder="Ex. I am Marie Curie and got Nobel Prize twice in my life..."
+                placeholder="Ex. I am Marie Curie..."
               ></textarea>
             </div>
 
             <div class="input-container">
               <label>Relative Club Priority Placement</label>
               <textarea
-                type="text"
-                name="club_priority"
+                name="CLUB PREFERENCE"
                 required
                 placeholder="Where does SAI Cell stand among your general preferences?"
               ></textarea>
@@ -212,40 +217,29 @@
             <div class="input-container">
               <label>Experience & Projects</label>
               <textarea
-                name="experience"
+                name="EXPERIENCE and PROJECTS"
                 rows="2"
                 required
-                placeholder="Detail your technical skills, past projects, or events you have managed. Include your role and the technologies used."
+                placeholder="Detail your technical skills..."
               ></textarea>
             </div>
 
             <div class="input-container">
               <label>Statement of Intent (Why SAI Cell?)</label>
               <textarea
-                name="why_join"
+                name="WHY SAI CELL?"
                 rows="3"
                 required
-                placeholder="Detail your core motivation for applying to this platform..."
-              ></textarea>
-            </div>
-
-            <div class="input-container">
-              <label>Core Technical / Creative Competencies</label>
-              <textarea
-                type="text"
-                name="club_priority"
-                required
-                placeholder="List your strongest skills separated by commas (e.g., Python, React, Premiere Pro, Event Planning)."
+                placeholder="Detail your core motivation..."
               ></textarea>
             </div>
 
             <div class="input-container">
               <label>Team Dynamics & Challenges</label>
               <textarea
-                type="text"
-                name="club_priority"
+                name="TEAM WORK and CHALLENGES"
                 required
-                placeholder="Describe a time you faced a difficult challenge on a project or in a team. How did you resolve it?"
+                placeholder="Describe a time you faced a difficult challenge..."
               ></textarea>
             </div>
 
@@ -277,7 +271,7 @@
 
       // 3. Send it to Google
       fetch(
-        "https://script.google.com/macros/s/AKfycbwqYXfoA1FQZ_ZK4-DN_Y7_yU7uWzwPKUaJx95bLxkJLPU826-uJx9j6E52mmM3DBw/exec",
+        "https://script.google.com/macros/s/AKfycbxl_iHW-4vxngtiInEoWLmTPpYiejU69voFJkR1K6GZ3rWKeXx1E7sjxK8jAon_oHKzKw/exec",
         {
           method: "POST",
           body: data, // Sending the converted data
@@ -286,9 +280,7 @@
       )
         .then(() => {
           // Because of no-cors, this triggers immediately after the network sends the data
-          alert(
-            "Submission successful!",
-          );
+          alert("Submission successful!");
           window.location.href = "https://www.alumninitdgp.in/";
         })
         .catch((error) => {
