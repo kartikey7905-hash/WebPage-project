@@ -189,6 +189,7 @@ body {
     background: transparent;
     border: 1px solid var(--brand-orange);
     color: var(--text-main);
+    margin-right: 0;
     padding: 0.6rem 1.4rem;
     border-radius: 4px;
     font-size: 0.75rem;
@@ -358,4 +359,355 @@ body {
 .social-icon:hover {
     color: var(--brand-orange); /* Makes them glow orange when hovered */
     transform: translateY(-2px); /* Gives a slight "lift" effect */
+}
+.footer {
+    background: #0d1117;
+    color: white;
+    padding: 60px 8%;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 280px;
+}
+
+.footer-section h2 {
+    color: #ff4d4d;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.footer-section h3 {
+    color: #ff4d4d;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.footer-section h4 {
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+.footer-section p {
+    color: #ccc;
+    line-height: 1.8;
+}
+
+.center-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-btn {
+    text-decoration: none;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.3s;
+    display: inline-block;
+    width: 220px;
+    text-align: center;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+}
+
+.instagram {
+    background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
+}
+
+.linkedin {
+    background: #0077b5;
+}
+
+.facebook {
+    background: #1877f2;
+}
+
+.quick-links {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-links li {
+    margin-bottom: 15px;
+}
+
+.quick-links a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.quick-links a:hover {
+    color: #ff4d4d;
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #ccc;
+}
+/* ==========================================================================
+   🌐 ENTERPRISE FOOTER STRUCTURE
+   ========================================================================== */
+.footer {
+    background-color: #0b1120; /* Deep premium slate background */
+    border-top: 1px solid #334155; /* Subtle separation line */
+    padding: 4rem 5% 2rem 5%;
+    color: #f8fafc;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Typography Enhancements */
+.footer-section h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+.footer-section h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #f59e0b; /* Professional Amber accent */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-section h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.footer-section p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   🔗 CLEAN SOCIAL LINKS & QUICK LINKS
+   ========================================================================== */
+/* Replaces bulk buttons with clean, inline, accessible corporate rows */
+.footer-section.center-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    background: none !important; /* Strips blocky gradients */
+    border: none !important;
+    padding: 0 !important;
+    width: auto !important;
+    box-shadow: none !important;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-btn:hover {
+    color: #ffffff;
+    transform: translateX(4px); /* Professional slide indicator */
+}
+
+/* Quick Links Unordered List formatting */
+.quick-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.quick-links li a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.quick-links li a:hover {
+    color: #ffffff;
+    transform: translateX(4px);
+}
+
+/* ==========================================================================
+   🔒 FOOTER BOTTOM COMPLIANCE
+   ========================================================================== */
+.footer-bottom {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #1e293b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-bottom p {
+    color: #64748b;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Media Query for Responsive Mobile Devices */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 2.5rem;
+    }
+}.logo-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 800;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+}
+
+.logo-image {
+    height: 38px; /* Standard professional navbar graphic height */
+    width: auto;
+    object-fit: contain;
+    
+    /* THE TRICK: This clips out the bottom 20% of your image 
+       where that tiny, blurry "SAIC" text is baked into the file */
+    clip-path: inset(0% 0% 20% 0%); 
+    
+    /* Smooth contrast adjustments to make the colors match your clean typography */
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15)) contrast(1.05);
+    
+    transform: translateY(2px); /* Perfectly aligns the center point with the text letters */
+}/* ==========================================================================
+   📱 ENTERPRISE MOBILE & TABLET LAYOUT ENGINE
+   ========================================================================== */
+
+/* Tablets and Large Phones (Screens under 992px) */
+@media (max-width: 992px) {
+    .app-container {
+        padding: 1.5rem 2rem; /* Give sides more breathing room */
+    }
+
+    /* Stacks the main content column on top of the card smoothly */
+    .hero-split-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 3rem 0;
+        text-align: center; /* Centers text for balanced mobile viewing */
+    }
+
+    .hero-description {
+        margin: 0 auto 2rem auto;
+        max-width: 600px;
+    }
+
+    /* Centers the primary and secondary action buttons */
+    .action-cluster {
+        justify-content: center;
+    }
+
+    /* Aligns the overview card text comfortably for reading */
+    .hologram-glass-card {
+        text-align: left;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+/* Medium to Small Mobile Phones (Screens under 768px) */
+@media (max-width: 768px) {
+    /* FIXES THE HEADER OVERLAPPING MIXUP */
+    .navbar {
+        flex-direction: column; /* Stacks brand elements above navigation actions */
+        gap: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center; /* Evenly spaces elements along the center row */
+        flex-wrap: wrap; /* Prevents icons and buttons from squeezing out of view */
+        gap: 1.25rem;
+    }
+
+    /* Cleans up the huge main title font so it fits small mobile screens */
+    .main-headline {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    /* Stacks the entry form and about buttons vertically on small devices */
+    .action-cluster {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .action-cluster a, 
+    .action-cluster button {
+        width: 100%; /* Spreads the tap target cleanly across the device width */
+    }
+}
+
+/* Ultra-Small Screen Optimization (Screens under 400px) */
+@media (max-width: 400px) {
+    .main-headline {
+        font-size: 2.2rem;
+    }
+
+    .nav-links {
+        gap: 0.85rem; /* Keeps padding tiny so nothing breaks onto random lines */
+    }
+
+    .btn-nav-action {
+        padding: 0.5rem 1rem;
+        font-size: 0.7rem;
+    }
 }

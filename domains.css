@@ -1,0 +1,125 @@
+/* ==========================================================================
+   🎨 CYBER BRAND CONSTANTS (STARTING VIBE)
+   ========================================================================== */
+:root {
+    --bg-dark-core: #040608;
+    --glass-surface: rgba(9, 11, 16, 0.8);
+    --brand-orange: #f15a22; 
+    --text-main: #ffffff;
+    --text-sub: #8792a2;
+    --line-glow: rgba(241, 90, 34, 0.15);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: system-ui, -apple-system, sans-serif; }
+
+body {
+    background-color: var(--bg-dark-core);
+    color: var(--text-main);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   🌐 NAVBAR (UNIFIED CYBER STYLE)
+   ========================================================================== */
+.app-container { max-width: 1400px; margin: 0 auto; padding: 2rem 4rem; min-height: 100vh; display: flex; flex-direction: column; position: relative; z-index: 10; }
+
+.navbar { display: flex; justify-content: space-between; align-items: center; width: 100%; padding-bottom: 1rem;}
+.logo-brand { font-weight: 900; font-size: 1.3rem; letter-spacing: 1px; display: flex; align-items: center; gap: 10px;}
+.logo-image { width: 45px; height: auto; }
+.orange-text { color: var(--brand-orange); }
+.white-text { color: var(--text-main); }
+
+.nav-links { display: flex; align-items: center; gap: 2.5rem; }
+.nav-item { color: var(--text-sub); text-decoration: none; font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px; transition: color 0.2s; text-transform: uppercase; }
+.nav-item:hover, .nav-item.active { color: var(--text-main); text-shadow: 0 0 10px rgba(255,255,255,0.3); }
+
+.social-icon { font-size: 1.4rem; transition: color 0.3s ease, transform 0.3s ease; text-transform: none; }
+.social-icon:hover { color: var(--brand-orange); transform: translateY(-2px); filter: drop-shadow(0 0 8px rgba(241, 90, 34, 0.6)); }
+
+.btn-nav-action { background: transparent; border: 1px solid var(--brand-orange); color: var(--text-main); padding: 0.6rem 1.4rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700; cursor: pointer; transition: all 0.2s; text-transform: uppercase; letter-spacing: 1px;}
+.btn-nav-action:hover { background: var(--brand-orange); box-shadow: 0 0 20px rgba(241, 90, 34, 0.4); }
+
+/* ==========================================================================
+   📋 DOMAINS SHOWCASE (CYBER GRID)
+   ========================================================================== */
+.domains-showcase { padding: 4rem 0 6rem 0; display: flex; flex-direction: column; }
+.section-header-center { text-align: center; max-width: 800px; margin: 0 auto 4rem auto; }
+
+.status-pill { background: rgba(241, 90, 34, 0.05); border: 1px solid rgba(241, 90, 34, 0.2); color: var(--brand-orange); padding: 0.35rem 1rem; display: inline-block; border-radius: 20px; font-size: 0.65rem; font-weight: 800; letter-spacing: 1.5px; margin-bottom: 1.5rem; }
+.main-headline { font-size: clamp(2.5rem, 4vw, 4.2rem); font-weight: 900; line-height: 1.1; letter-spacing: -1px; margin-bottom: 1.5rem; }
+.gradient-text { background: linear-gradient(135deg, var(--text-main) 40%, var(--brand-orange)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-description { color: var(--text-sub); font-size: 1rem; line-height: 1.6; }
+
+/* THE 7-CARD DOMAINS GRID */
+.domains-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 2rem; 
+    margin-bottom: 4rem; 
+}
+
+/* CYBER GLASSMORPHISM CARDS */
+.domain-card {
+    background: var(--glass-surface);
+    border: 1px solid var(--line-glow);
+    border-radius: 8px;
+    padding: 2.5rem;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glowing Top Border on Hover */
+.domain-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: var(--brand-orange); opacity: 0; transition: opacity 0.3s ease; }
+.domain-card:hover::before { opacity: 1; box-shadow: 0 0 15px var(--brand-orange); }
+
+.domain-card:hover { transform: translateY(-5px); border-color: rgba(241, 90, 34, 0.5); box-shadow: 0 10px 30px rgba(241, 90, 34, 0.15); }
+
+.domain-icon { font-size: 2.5rem; color: var(--brand-orange); margin-bottom: 1.5rem; text-shadow: 0 0 15px rgba(241, 90, 34, 0.4); }
+.domain-title { font-size: 1.4rem; font-weight: 800; color: var(--text-main); margin-bottom: 1rem; }
+.domain-desc { color: var(--text-sub); font-size: 0.95rem; line-height: 1.6; flex-grow: 1; }
+
+/* GLOW BUTTON */
+.action-cluster-center { display: flex; justify-content: center; }
+.btn-primary-solid { background: var(--brand-orange); color: var(--text-main); border: none; padding: 0.9rem 2rem; border-radius: 4px; font-weight: 800; font-size: 0.8rem; cursor: pointer; box-shadow: 0 4px 15px rgba(241, 90, 34, 0.25); transition: transform 0.2s, box-shadow 0.2s; letter-spacing: 1px;}
+.btn-primary-solid:hover { transform: translateY(-2px); box-shadow: 0 6px 25px rgba(241, 90, 34, 0.45); }
+
+/* ==========================================================================
+   🌐 FOOTER (CLEAN CORPORATE AS REQUESTED PREVIOUSLY)
+   ========================================================================== */
+.footer { background-color: #0b1120; padding: 5rem 5% 2rem 5%; color: #94a3b8; position: relative; z-index: 10; border-top: 1px solid rgba(255,255,255,0.05); }
+.footer-container { display: flex; justify-content: space-between; gap: 4rem; max-width: 1200px; margin: 0 auto; }
+.footer-section { display: flex; flex-direction: column; gap: 1.5rem; }
+.brand-section { flex: 1.2; }
+
+.footer-section h2 { font-size: 1.8rem; font-weight: 800; color: #ffffff; margin-bottom: -0.8rem; letter-spacing: normal; }
+.footer-section h4 { font-size: 0.85rem; font-weight: 600; color: #f59e0b; text-transform: uppercase; letter-spacing: 0.5px; }
+.footer-section h3 { font-size: 1.1rem; font-weight: 700; color: #ffffff; text-transform: uppercase; margin-bottom: 0.2rem; }
+.footer-section p { color: #94a3b8; font-size: 0.95rem; line-height: 1.6; max-width: 90%; }
+
+.social-links-vertical { display: flex; flex-direction: column; gap: 1.2rem; }
+.quick-links { list-style: none; display: flex; flex-direction: column; gap: 1.2rem; padding: 0; }
+.clean-link { color: #94a3b8; text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s ease; display: inline-block; }
+.clean-link:hover { color: #ffffff; }
+
+.footer-bottom { margin-top: 5rem; padding-top: 1.5rem; border-top: 1px solid #1e293b; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; max-width: 1200px; margin-left: auto; margin-right: auto; }
+.footer-bottom p { color: #64748b; font-size: 0.85rem; }
+
+/* ==========================================================================
+   📱 MOBILE ADJUSTMENTS
+   ========================================================================== */
+@media (max-width: 992px) { 
+    .app-container { padding: 1.5rem 2rem; } 
+    .footer-container { flex-direction: column; gap: 3rem; }
+    .footer-bottom { flex-direction: column; text-align: center; margin-top: 3rem; }
+}
+
+@media (max-width: 768px) {
+    .navbar { flex-direction: column; gap: 1.5rem; padding-bottom: 1.5rem; }
+    .nav-links { width: 100%; justify-content: center; flex-wrap: wrap; gap: 1.25rem; }
+    .main-headline { font-size: 2.5rem; }
+}
